@@ -41,7 +41,7 @@ public class FileBasedLineDao implements LineDao {
 
     private List<Line> readFromFile() {
         try (FileInputStream inputStream = new FileInputStream(location)) {
-            return Arrays.asList(objectMapper.readValue(inputStream, Line[].class));
+            return new ArrayList<>(Arrays.asList(objectMapper.readValue(inputStream, Line[].class)));
         } catch (IOException exception) {
             LOGGER.error("Unable to read from file", exception);
         }

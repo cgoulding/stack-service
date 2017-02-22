@@ -1,6 +1,5 @@
 package com.goulding.connor.stack.web;
 
-import com.goulding.connor.stack.web.rest.LineRestController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
