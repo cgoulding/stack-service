@@ -1,8 +1,8 @@
-FROM platten/alpine-oracle-jre8-docker
+# Start from base image with Java 8
+FROM java:8-jre-alpine
 
 WORKDIR /
 
-MKDIR lib
-COPY target/dependency/lib/ lib
+COPY target/dependency/lib/* lib/
 
-CMD java -jar stack-service-web-0.0.1-SNAPSHOT-exec.jar
+CMD java -jar lib/stack-service-web-0.0.1-SNAPSHOT-exec.jar
